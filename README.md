@@ -50,8 +50,8 @@ Bem-vindo ao repositório do projeto final da disciplina de **Programação Orie
 
 ## 📚 Documentação
 
-* 📄 [Documentação da Solução](./solucao/README.md)
-* 📄 [Documentação UML](./uml/README.md)
+* 📄 [Documentação da Solução](docs/solução/README.md)
+* 📄 [Documentação UML](docs/UML/README.md)
 
 ---
 
