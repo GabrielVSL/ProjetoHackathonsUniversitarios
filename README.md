@@ -5,7 +5,7 @@
 [![JUnit](https://img.shields.io/badge/JUnit-5-red?style=for-the-badge\&logo=testing-library)](https://junit.org/junit5/)
 [![Maven](https://img.shields.io/badge/Maven-Build-blue?style=for-the-badge\&logo=apachemaven)](https://maven.apache.org/)
 
-Bem-vindo ao repositório do projeto final da disciplina de **Programação Orientada a Objetos (POO)**. Este sistema foi desenvolvido com o objetivo de simular o gerenciamento de Hackathons Universitários, abrangendo toda a estrutura de equipes, projetos, apresentações e avaliações.
+Bem-vindo ao repositório do projeto final da disciplina de **Programação Modular (PM)**. Este sistema foi desenvolvido com o objetivo de simular o gerenciamento de Hackathons Universitários, abrangendo toda a estrutura de equipes, projetos, apresentações e avaliações.
 
 ---
 
@@ -14,8 +14,8 @@ Bem-vindo ao repositório do projeto final da disciplina de **Programação Orie
 * Java 17
 * JUnit 5 (testes unitários)
 * Maven (gerenciamento de dependências e build)
-* Mermaid (diagramação UML)
-* IDE: IntelliJ IDEA / NetBeans
+* LucidChart (diagramação UML)
+* IDE: VSCode / NetBeans
 
 ---
 
@@ -24,7 +24,7 @@ Bem-vindo ao repositório do projeto final da disciplina de **Programação Orie
 * `src/main/java`
 
   * `model/` → todas as entidades do sistema (Pessoa, Projeto, Equipe, etc.)
-  * `service/` → coleções Singleton para gerenciamento em memória
+  * `repository/` → coleções Singleton para gerenciamento em memória
   * `App.java` → classe principal com simulação completa no método `main()`
 
 * `src/test/java`
