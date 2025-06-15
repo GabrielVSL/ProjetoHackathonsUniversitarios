@@ -41,7 +41,7 @@ public class AppTests {
         ap.adicionarNota(8.0);
         ap.adicionarNota(6.0);
         ap.adicionarNota(7.0);
-        double media = ap.calcularMedia();
+        double media = ap.avaliar();
         assertEquals(7.0, media, 0.001);
 
         Projeto proj = new Projeto(2, "P2", "Desc");
