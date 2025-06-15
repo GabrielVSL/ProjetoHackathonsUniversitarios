@@ -11,7 +11,8 @@ import java.util.List;
 
 /**
  *
- * @author gabri
+ * @author Gabriel e João Pedro
+ * Classe Apresentacao representa uma apresentação de um projeto em uma sala específica.
  */
 public class Apresentacao  {
     private int id;

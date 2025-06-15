@@ -32,17 +32,6 @@ public class ApresentacaoRepository {
         apresentacoes.add(a);
     }
 
-    public Apresentacao buscarApresentacao(int id) {
-        return apresentacoes.stream()
-                             .filter(a -> a.getId() == id)
-                             .findFirst()
-                             .orElse(null);
-    }
-
-    public List<Apresentacao> listarApresentacoes() {
-        return new ArrayList<>(apresentacoes);
-    }
-
     public List<Apresentacao> listarProjetosAprovados(){
         return apresentacoes.stream()
                              .filter(a -> a.getProjeto().getNotaFinal() >= 7.0)

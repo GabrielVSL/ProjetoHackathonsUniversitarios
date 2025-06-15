@@ -65,7 +65,7 @@ public class App {
         a2.setProjeto(p2);
         p2.setApresentacao(a2);
 
-        // Fazer cada jurado avaliar (coleta notas que serão usadas para calcular a média), usamos numeros aleatórios para simular notas
+        
        
 
         // 5) Calcular nota final de cada projeto

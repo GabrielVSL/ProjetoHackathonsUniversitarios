@@ -31,8 +31,8 @@ public class Equipe {
         return nome;
     }
 
-    public void adicionarAluno(Estudante e) {
-        membros.add(e);
+    public void adicionarAluno(Estudante m) {
+        membros.add(m);
     }
 
     public List<Estudante> getAlunos() {
