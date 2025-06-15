@@ -6,7 +6,8 @@ package model;
 
 /**
  *
- * @author gabri
+ * @author Gabriel e Joao Pedro
+ * Classe Intituição representa a instituição que atua em uma área específica.
  */
 public class Instituicao {
     private String nome;

@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package service;
+package repository;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,17 +12,17 @@ import model.Equipe;
  *
  * @author gabri
  */
-public class Equipes {
-    private static Equipes instance;
+public class EquipeRepository {
+    private static EquipeRepository instance;
     private List<Equipe> equipes;
 
-    private Equipes() {
+    private EquipeRepository() {
         equipes = new ArrayList<>();
     }
 
-    public static Equipes getInstance() {
+    public static EquipeRepository getInstance() {
         if (instance == null) {
-            instance = new Equipes();
+            instance = new EquipeRepository();
         }
         return instance;
     }

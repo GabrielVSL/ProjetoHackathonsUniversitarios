@@ -6,7 +6,8 @@ package model;
 
 /**
  *
- * @author gabri
+ * @author Gabriel e Joao Pedro
+ * Classe Empresa representa uma instituição que atua em uma área específica.
  */
 public class Empresa extends Instituicao {
     private String areaAtuacao;

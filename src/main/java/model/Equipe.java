@@ -14,12 +14,13 @@ import java.util.List;
 public class Equipe {
     private int id;
     private String nome;
-    private List<Estudante> alunos = new ArrayList<>();
+    private List<Estudante> membros;
     private Projeto projeto;
 
     public Equipe(int id, String nome) {
         this.id = id;
         this.nome = nome;
+        this.membros = new ArrayList<>();
     }
 
     public int getId() {
@@ -31,11 +32,11 @@ public class Equipe {
     }
 
     public void adicionarAluno(Estudante e) {
-        alunos.add(e);
+        membros.add(e);
     }
 
     public List<Estudante> getAlunos() {
-        return alunos;
+        return membros;
     }
 
     public void setProjeto(Projeto projeto) {
@@ -45,4 +46,6 @@ public class Equipe {
     public Projeto getProjeto() {
         return projeto;
     }
+
+    
 }

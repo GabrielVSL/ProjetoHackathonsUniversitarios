@@ -2,28 +2,28 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package service;
+package repository;
 
 import java.util.ArrayList;
 import java.util.List;
 import model.Apresentacao;
-import model.Equipe;
+
 
 /**
  *
- * @author gabri
+ * @author Gabriel e João Pedro 
  */
-public class Apresentacoes {
-    private static Apresentacoes instance;
+public class ApresentacaoRepository {
+    private static ApresentacaoRepository instance;
     private List<Apresentacao> apresentacoes;
 
-    private Apresentacoes() {
+    private ApresentacaoRepository() {
         apresentacoes = new ArrayList<>();
     }
 
-    public static Apresentacoes getInstance() {
+    public static ApresentacaoRepository getInstance() {
         if (instance == null) {
-            instance = new Apresentacoes();
+            instance = new ApresentacaoRepository();
         }
         return instance;
     }
@@ -43,14 +43,12 @@ public class Apresentacoes {
         return new ArrayList<>(apresentacoes);
     }
 
-    /**
-     * Lista projetos aprovados a partir das apresentações.
-     */
-    public List<Equipe> listarProjetosAprovados() {
-        List<Equipe> aprovados = new ArrayList<>();
-        apresentacoes.stream()
-            .filter(a -> a.calcularMedia() >= 7)
-            .forEach(a -> aprovados.add(a.getProjeto().getEquipe()));
-        return aprovados;
+    public List<Apresentacao> listarProjetosAprovados(){
+        return apresentacoes.stream()
+                             .filter(a -> a.getProjeto().getNotaFinal() >= 7.0)
+                             .toList();
     }
+
+  
+    
 }

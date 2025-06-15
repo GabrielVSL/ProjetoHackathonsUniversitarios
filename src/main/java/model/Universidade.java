@@ -6,7 +6,8 @@ package model;
 
 /**
  *
- * @author gabri
+ * @author Gabriel e Joao Pedro
+ * Classe Universidade representa uma instituição de ensino superior, com um curso principal.
  */
 public class Universidade extends Instituicao {
     private String cursoPrincipal;

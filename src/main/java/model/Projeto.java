@@ -6,9 +6,11 @@ package model;
 
 /**
  *
- * @author gabri
+ * @author Gabriel e Joao Pedro 
+ * Classe Projeto representa um projeto que pode ser avaliado.
+ * Ela implementa a interface Avaliavel, permitindo que projetos sejam avaliados
  */
-public class Projeto implements Avaliavel {
+public class Projeto  {
     private int id;
     private String titulo;
     private String descricao;
@@ -55,11 +57,8 @@ public class Projeto implements Avaliavel {
     }
 
     public void calcularNotaFinal() {
-        this.notaFinal = apresentacao.calcularMedia();
+        this.notaFinal = apresentacao.avaliar();
     }
 
-    @Override
-    public double calcularNota() {
-        return notaFinal;
-    }
+    
 }

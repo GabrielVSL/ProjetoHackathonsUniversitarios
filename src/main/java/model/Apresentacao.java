@@ -13,12 +13,12 @@ import java.util.List;
  *
  * @author gabri
  */
-public class Apresentacao implements Avaliavel {
+public class Apresentacao  {
     private int id;
     private LocalDate data;
     private LocalTime hora;
     private Sala sala;
-    private Banca banca;
+    private Avaliavel banca;
     private List<Double> notas = new ArrayList<>();
     private Projeto projeto;
 
@@ -49,7 +49,7 @@ public class Apresentacao implements Avaliavel {
         this.banca = banca;
     }
 
-    public Banca getBanca() {
+    public Avaliavel getBanca() {
         return banca;
     }
     
@@ -65,15 +65,10 @@ public class Apresentacao implements Avaliavel {
         notas.add(nota);
     }
 
-    public double calcularMedia() {
-        return notas.stream()
-                    .mapToDouble(Double::doubleValue)
-                    .average()
-                    .orElse(0);
+    public double avaliar() {
+        return  banca.calcularNota();
     }
+    
 
-    @Override
-    public double calcularNota() {
-        return calcularMedia();
-    }
+    
 }

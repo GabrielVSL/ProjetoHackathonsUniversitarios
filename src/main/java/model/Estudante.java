@@ -6,7 +6,8 @@ package model;
 
 /**
  *
- * @author gabri
+ * @author Gabriel e Joao Pedro
+ * Classe Estudante representa membros dos Projetos.
  */
 public class Estudante extends Pessoa {
     private String matricula;

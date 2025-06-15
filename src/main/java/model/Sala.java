@@ -6,7 +6,8 @@ package model;
 
 /**
  *
- * @author gabri
+ * @author Gabriel e Joao Pedro
+ * Classe Sala representa uma sala com identificação, capacidade e estado de reserva.
  */
 public class Sala {
     private String identificacao;

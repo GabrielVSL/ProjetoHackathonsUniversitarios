@@ -2,14 +2,16 @@ import model.Apresentacao;
 import model.Equipe;
 import model.Projeto;
 import model.Sala;
-import service.Apresentacoes;
+import repository.ApresentacaoRepository;
+import repository.EquipeRepository;
+
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
-import service.Equipes;
+
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -53,8 +55,8 @@ public class AppTests {
     public void testSingletonEquipes() {
         Equipe e1 = new Equipe(10, "T1");
         Equipe e2 = new Equipe(20, "T2");
-        Equipes s1 = Equipes.getInstance();
-        Equipes s2 = Equipes.getInstance();
+        EquipeRepository s1 = EquipeRepository.getInstance();
+        EquipeRepository s2 = EquipeRepository.getInstance();
         assertSame(s1, s2);
         s1.adicionarEquipe(e1);
         s1.adicionarEquipe(e2);
@@ -85,13 +87,13 @@ public class AppTests {
         p1.setApresentacao(a1); a1.setProjeto(p1);
         p2.setApresentacao(a2); a2.setProjeto(p2);
         // Registrar no singleton
-        Apresentacoes apService = Apresentacoes.getInstance();
+        ApresentacaoRepository apService = ApresentacaoRepository.getInstance();
         apService.adicionarApresentacao(a1);
         apService.adicionarApresentacao(a2);
         // Filtrar aprovados
-        List<Equipe> aprovadas = apService.listarProjetosAprovados();
-        assertTrue(aprovadas.contains(eq1));
-        assertFalse(aprovadas.contains(eq2));
+        List<Apresentacao> aprovadas = apService.listarProjetosAprovados();
+        assertTrue(aprovadas.contains(a1));
+        assertFalse(aprovadas.contains(a2));
     }
 }
 

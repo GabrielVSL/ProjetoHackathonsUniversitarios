@@ -6,7 +6,8 @@ package model;
 
 /**
  *
- * @author gabri
+ * @author Joao Pedro e Gabriel
+ * Classe Profissional representa um profissional com registro específico.
  */
 public class Profissional extends Pessoa {
     private String registroProfissional;

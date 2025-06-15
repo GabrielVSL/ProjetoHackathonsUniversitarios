@@ -9,14 +9,28 @@ package model;
  * @author gabri
  */
 public class Pessoa {
+    private int id;
     private String nome;
     private String cpf;
+    private static int contador = 1;
+    
+    Instituicao instituicao;  
+    
+     
 
     public Pessoa(String nome, String cpf) {
         this.nome = nome;
         this.cpf = cpf;
-    }
+        this.id = contador++;
 
+       
+    }
+    public int getId() {
+        return id;
+    }
+    public void setId(int id) {
+        this.id = id;
+    }
     public String getNome() {
         return nome;
     }
